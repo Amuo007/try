@@ -1,25 +1,24 @@
+
 <%- include("partials/header"); -%> 
 
-<div class="row">
-    <div class="col-sm-8">
-        <h1>Home</h1>
-    </div>
-    <div class="col-sm-4">
-        <p><%= homePageContent %> </p>
-    </div>
-  </div>
-
-
-
+<h1>NODE JS </h1>
+<p><%= homePageContent %> </p>
 
 
 <% posts.forEach( function(post) { %>
-    <h1><%= post.title %> </h1>
-    <p>
-        <%= post.content.substring(0,100)+" ..."; %>
-        <a href="/post/<%=post.title%>">Read More</a> 
-    </p>
+
+    <div class="list-group">
+        <li class="list-group-item active" aria-current="true">  <h1><%= post.title %> </h1></li>
+        <a href="/post/<%=post.title%>" class="list-group-item list-group-item-action"><%= post.content.substring(0,100)+" ..."; %></a>
+        <br>
+        
+      </div>
+  
+   
 <%   } ); %>
+
+
+
 
 
 
